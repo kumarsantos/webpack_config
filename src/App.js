@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import './main.scss';
+import btnStyle from './Button.module.css';
+import DiceImage from './images/Two.png';
 
-function App() {
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <div id='container'>
+      <button className={btnStyle.error}>Error</button> 
+      <button className={btnStyle.success}>Success</button> 
+      <img src={DiceImage} alt='img' />
+      </div>
+  )
 }
 
-export default App;
+export default App
